@@ -20,13 +20,13 @@ services:
     - --certificatesresolvers.myhttpchallenge.acme.httpchallenge.entrypoint=web
     - --certificatesresolvers.myhttpchallenge.acme.email=contact@innque.com
 
-    labels:
-    - traefik.enable=true # Enable traefik on itself to view dashboard and assign subdomain to view it
-    - traefik.http.routers.traefik.rule=Host("proxy.cliqode.com") # Setting the domain for the dashboard
-    - traefik.http.routers.traefik.service=api@internal # Enabling the api to be a service to access
-    - traefik.http.routers.api.middlewares=auth
-    - traefik.frontend.auth.basic:username:passwordMD5
-    - traefik.http.middlewares.auth.basicauth.users=admin:proxY4$$
+#    labels:
+#    - traefik.enable=true # Enable traefik on itself to view dashboard and assign subdomain to view it
+#    - traefik.http.routers.traefik.rule=Host("proxy.innque.com") # Setting the domain for the dashboard
+#    - traefik.http.routers.traefik.service=api@internal # Enabling the api to be a service to access
+#    - traefik.http.routers.api.middlewares=auth
+#    - traefik.frontend.auth.basic:username:passwordMD5
+#    - traefik.http.middlewares.auth.basicauth.users=admin:proxY4$$
 
     ports:
     - 80:80
