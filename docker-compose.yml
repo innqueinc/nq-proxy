@@ -3,7 +3,7 @@ version: "3"
 services:
   traefik:
     image: traefik:2.5.1
-    container_name: nq-proxy
+    container_name: nq_proxy
     restart: always
     command:
     #### These are the CLI commands that will configure Traefik and tell it how to work! ####
@@ -39,4 +39,4 @@ services:
 networks:
   default:
     external:
-      name: proxy-server-network
+      name: server_network
